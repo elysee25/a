@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+
+<style>
+
+
+
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color:mediumseagreen;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top:0px;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+/* Form box */
+.container {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    margin: 50px auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ff7e5f;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e86c50;
+}
+
+/* small text */
+p {
+    margin-top: 15px;
+}
+  footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+</style>
+</head>
+
+<body>
+    <header>
+    <h1>This is  My Website registration page</h1>
+    <p>My registration page</p>
+</header>
+     <nav>
+        <a href="home.html">Home</a>
+        <a href="registration.html">Registration</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+<div class="container">
+    <h2>Sign Up</h2>
+
+    <form onsubmit="return validateForm()" method="post" action="#">
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="password" id="confirm" name="confirm" placeholder="Confirm Password" required>
+
+        <button type="submit">Create Account</button>
+    </form>
+
+    <p>Already have an account? <a href="login.html">Login</a></p>
+</div>
+<footer>
+  <p>
+    Developed by Level3 Sod team | Updated on 
+    <span id="datetime"></span>
+  </p>
+</footer>
+
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    document.getElementById("datetime").textContent = now.toLocaleString();
+  }
+
+  updateDateTime(); // run once on load
+  setInterval(updateDateTime, 1000); // update every second
+  
+function validateForm() {
+    let password = document.getElementById("password").value;
+    let confirm = document.getElementById("confirm").value;
+
+    if (password !== confirm) {
+        alert("Passwords do not match!");
+        return false;
+    }
+
+    alert("Account created successfully!");
+    return true;
+}
+</script>
+
+
+</body>
+</html>

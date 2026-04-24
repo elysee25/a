@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<style>
+  body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: green;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color:sandybrown;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: rebeccapurple;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: gray;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+/* Login box */
+.container {
+    background: salmon;
+    padding: 30px;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow:0px 0px rgba(0,0,0,0.2);
+    text-align: center;
+    margin: 50px auto;
+    color: yellowgreen;
+    border-radius: 25px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #4facfe;
+    color: white;
+    border: none;
+    border-radius:25px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 25px;
+}
+  footer {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+        }
+
+button:hover {
+    background: #3a8dde;
+}
+
+p {
+    margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+<header>
+    <h1></marquee>Welcome to My Website</marquee></h1>
+    <p>This is my home page</p>
+</header>
+
+<nav>
+            <a href="home.html">Home</a>
+            <a href="Registration.html">Registration</a>
+            <a href="gallery.html">gallery</a>
+            <a href="About.html">About</a>
+            <a href="login.html">login</a>
+            <ul>
+</nav>
+<div class="container">
+    <h2>Login</h2>
+
+    <form onsubmit="return loginUser()">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="register.html">Register</a></p>
+</div>
+
+<footer>
+  <p>
+    Developed by Level3 Sod team | Updated on 
+    <span id="datetime"></span>
+  </p>
+</footer>
+
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    document.getElementById("datetime").textContent = now.toLocaleString();
+  }
+
+  updateDateTime(); // run once on load
+  setInterval(updateDateTime, 1000); // update every second
+</script>
+</body>
+<script>
+function loginUser() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (email === "" || password === "") {
+        alert("Please fill all fields");
+        return false;
+    }
+
+    alert("Login successful!");
+    return true;
+}
+</script>
+</html>

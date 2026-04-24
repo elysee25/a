@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Coding Online</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: gray;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+     nav {
+            padding: 10px;
+            text-align: center;
+            padding-right: 40%;
+            padding-bottom:20px;
+            margin-top: 25px;
+        }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to right, #0d6efd, #6610f2);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin: 20px 0;
+    }
+
+    .btn {
+      background: #ffc107;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 50px 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .testimonials {
+      background: #eee;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media(max-width: 768px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>CodeMastering</h1>
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="registration.html">REGISTRATION</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="about.html">ABOUT</a>
+    <a href="login.html">LOGIN</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2><marquee>Learn Software Development Online </marquee></h2>
+  <p>Start your journey to becoming a professional developer today</p>
+  <a href="#" class="btn">Get Started</a>
+</section>
+
+<section class="features">
+  <div class="card">
+    <h3>Beginner Friendly</h3>
+    <p><b>Learn step by step from scratch with simple explanations.</b></p>
+  </div>
+
+  <div class="card">
+    <h3>Real Projects</h3>
+    <p>Build real-world applications to boost your skills.</p>
+  </div>
+
+  <div class="card">
+    <h2><b>Flexible Learning</b></h2>
+    <p>Learn anytime, anywhere at your own pace.</p>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2>What Our Students Say</h2>
+  <p>"This platform helped me become a developer!"</p>
+</section>
+
+<footer>
+     Developed by Level3 Sod team | Updated on 
+    <span id="datetime"></span>
+</footer>
+
+</body>
+</html>
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    document.getElementById("datetime").textContent = now.toLocaleString();
+  }
+
+  updateDateTime(); // run once on load
+  setInterval(updateDateTime, 1000); 
+  </script>

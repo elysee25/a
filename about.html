@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head><title>this is about page</title></head>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color:gold;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+          footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        nav a:hover {
+            color: darkorange;
+        }
+    </style>
+    <body>
+         <header>
+    <h1>Welcome to My Website</h1>
+    <p>This is my home page</p>
+</header>
+        <nav>
+         <a href="home.html">Home</a>
+            <a href="Registration.html">Registration</a>
+            <a href="gallery.html">gallery</a>
+            <a href="About.html">About</a>
+            <a href="login.html">login</a>
+            <ul>
+        </nav>
+        <h1><b><i>WEBSITE THAT HELP LEARNERS TO MASTER THEIR COURSES BY USING ONLINE TUTORIALS</i></b></h1>
+<P><I> This website will help the learners to know more about how to become 
+    the best developers especially those who study softwaredevelopment</I></P>
+   <p><i>In this website a user can fill all required informations 
+    in order to be allowed to start</i></p>
+
+    <p><b>If you learn by using online tutorials you gain more and new skills,knowledge
+        through the exercises they give you. 
+        so thats why i encuorage you to use those tutorials 
+    for example youtube tutorials and other many. </b></p>
+    </body>
+</form>
+<footer>
+    Developed by Level3 Sod team | Updated on 
+    <span id="datetime"></span>
+</footer>
+</body>
+</html>
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    document.getElementById("datetime").textContent = now.toLocaleString();
+  }
+
+  updateDateTime(); // run once on load
+  setInterval(updateDateTime, 1000); 
+  </script>
